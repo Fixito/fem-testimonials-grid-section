@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/testimonials-grid-section-ZNXXochCrD)
+- Live Site URL: [Demo](https://fem-testimonials-section.netlify.app/)
 
 ## My process
 
