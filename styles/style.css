@@ -21,7 +21,6 @@
   --fs-400: 1rem;
   --fs-500: 1.25rem;
 
-  --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
 
@@ -152,12 +151,12 @@ p {
 
 .card__summary {
   font-size: var(--fs-500);
+  font-weight: var(--fw-semibold);
   margin-block-start: 1.125rem;
 }
 
 .card__quote {
   font-size: var(--fs-200);
-  font-weight: var(--fw-regular);
   line-height: 1.4;
   color: var(--neutral-2);
   margin-block-start: 1rem;
