@@ -21,6 +21,7 @@
   --fs-400: 1rem;
   --fs-500: 1.25rem;
 
+  --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
 
@@ -48,7 +49,6 @@ body {
 h1,
 h2,
 h3 {
-  text-wrap: balance;
   margin: 0;
 }
 
@@ -157,6 +157,7 @@ p {
 
 .card__quote {
   font-size: var(--fs-200);
+  font-weight: var(--fw-regular);
   line-height: 1.4;
   color: var(--neutral-2);
   margin-block-start: 1rem;
@@ -198,10 +199,6 @@ p {
     right: 5rem;
   }
 
-  .testimonials__card:nth-of-type(1) .card__quote {
-    margin-block-start: 1rem;
-  }
-
   .testimonials__card:nth-of-type(2) {
     grid-area: b;
   }
@@ -220,5 +217,10 @@ p {
 
   .testimonials__card .card__quote {
     margin-block-start: 1.5rem;
+  }
+
+  .testimonials__card:nth-of-type(1) .card__quote,
+  .testimonials__card:nth-of-type(2) .card__quote {
+    margin-block-start: 1rem;
   }
 }
