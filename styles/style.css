@@ -28,6 +28,7 @@
   --rounded-lg: 0.5rem;
   --shadow-1: 0 -313px 252px 0 rgba(255 255 255 / 50%);
   --shadow-2: 40px 60px 50px -47px rgba(72 85 106 / 25.74%);
+  --max-width: 68.75rem;
 }
 
 * {
@@ -54,6 +55,7 @@ h3 {
 p {
   text-wrap: pretty;
 }
+
 .img {
   display: block;
   max-width: 100%;
@@ -75,6 +77,8 @@ p {
 .testimonials {
   display: grid;
   gap: 1.5rem;
+  max-inline-size: var(--max-width);
+  margin-inline: auto;
 }
 
 .testimonials__card {
@@ -163,6 +167,16 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+  body {
+    padding-block: 0;
+  }
+
+  main {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+
   .testimonials {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.875rem 1.5rem;
