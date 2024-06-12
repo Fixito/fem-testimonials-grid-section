@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* colors */
+  --primary-light: #a775f1;
+  --primary: #733fc8;
+
+  /* neutral */
+  --neutral-1: #ecf2f8;
+  --neutral-2: #cfcfcf;
+  --neutral-3: #48556a;
+  --neutral-4: #19202d;
+
+  /* rest of colors */
+  --white: #fff;
+
+  /* typography */
+  --ff-body: 'Barlow Semi Condensed', sans-serif;
+  --fs-100: 0.6875rem;
+  --fs-200: 0.8125rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* rest of vars */
+  --rounded-lg: 0.5rem;
+  --shadow-1: 0 -313px 252px 0 rgba(255 255 255 / 50%);
+  --shadow-2: 40px 60px 50px -47px rgba(72 85 106 / 25.74%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-medium);
+  color: var(--white);
+  background-color: var(--neutral-1);
+  padding: 4.4375rem 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  margin: 0;
+}
+
+p {
+  text-wrap: pretty;
+}
+.img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.testimonials {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.testimonials__card {
+  background-color: var(--primary);
+  padding: 1.625rem 2rem;
+  border-radius: var(--rounded-lg);
+  box-shadow: var(--shadow-2);
+}
+
+.card__figure {
+  display: flex;
+  align-items: center;
+  gap: 1.0625rem;
+}
+
+.card__img {
+  border-radius: 50%;
+  width: 1.75rem;
+}
+
+.card__name {
+  font-size: var(--fs-200);
+  line-height: 1;
+}
+
+.card__status {
+  font-size: var(--fs-100);
+  color: var(--neutral-2);
+  margin-block-start: 0.25rem;
+}
+
+.card__summary {
+  font-size: var(--fs-500);
+  margin-block-start: 1.125rem;
+}
+
+.card__quote {
+  font-size: var(--fs-200);
+  color: var(--neutral-2);
+  margin-block-start: 2.5rem;
+}
+
+.card__quote p::before,
+.card__quote p::after {
+  content: '"';
+}
+
+.testimonials__card:nth-of-type(1) {
+  background-color: var(--primary);
+  position: relative;
+}
+
+.testimonials__card:nth-of-type(1) * {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials__card:nth-of-type(1)::before {
+  content: '';
+  display: block;
+  background: url('../images/bg-pattern-quotation.svg') no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  z-index: 0;
+}
+
+.testimonials__card:nth-of-type(2) {
+  background-color: var(--neutral-3);
+}
+
+.testimonials__card:nth-of-type(3),
+.testimonials__card:nth-of-type(5) {
+  background-color: var(--white);
+}
+
+.testimonials__card:nth-of-type(3) p,
+.testimonials__card:nth-of-type(5) p {
+  color: var(--neutral-3);
+}
+
+.testimonials__card:nth-of-type(4) {
+  background-color: var(--neutral-4);
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonials {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem 1.5rem;
+    grid-template-areas:
+      'a a b e'
+      'c d d e';
+  }
+
+  .testimonials__card:nth-of-type(1) {
+    grid-area: a;
+  }
+
+  .testimonials__card:nth-of-type(2) {
+    grid-area: b;
+  }
+
+  .testimonials__card:nth-of-type(3) {
+    grid-area: c;
+  }
+
+  .testimonials__card:nth-of-type(4) {
+    grid-area: d;
+  }
+
+  .testimonials__card:nth-of-type(5) {
+    grid-area: e;
+  }
+}
